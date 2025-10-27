@@ -1,6 +1,6 @@
 <?php
     function somma($parametri[]){
-        $somma = 1;
+        $somma = 0;
         foreach($parametri as $n){
             $somma = $somma + $n;
         }
