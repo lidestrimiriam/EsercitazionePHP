@@ -1,0 +1,17 @@
+[
+  {"nome":"Miriam","cognome":"Li Destri","email":"miriam.lidestri@example.com","login":"miriam","password":"miri007"},
+  {"nome":"Marco","cognome":"Rossi","email":"marco.rossi@example.com","login":"mrossi","password":"R15t9y2KpXq"},
+  {"nome":"Giulia","cognome":"Bianchi","email":"giulia.bianchi@example.com","login":"gbianchi","password":"Gbj72vLmN4"},
+  {"nome":"Alessio","cognome":"Verdi","email":"alessio.verdi@example.com","login":"averdi","password":"Av3rD88xQz2"},
+  {"nome":"Francesca","cognome":"Russo","email":"francesca.russo@example.com","login":"frusso","password":"Fr8u22pLkT6"},
+  {"nome":"Luca","cognome":"Colombo","email":"luca.colombo@example.com","login":"lcolombo","password":"Lc19p7zXw3q"},
+  {"nome":"Martina","cognome":"Conti","email":"martina.conti@example.com","login":"mconti","password":"Mct44v8Rz2p"},
+  {"nome":"Stefano","cognome":"Ferri","email":"stefano.ferri@example.com","login":"sferri","password":"Sfe72qLp9x"},
+  {"nome":"Elena","cognome":"Galli","email":"elena.galli@example.com","login":"egalli","password":"Eg25t9kZ2rL"},
+  {"nome":"Davide","cognome":"Moretti","email":"davide.moretti@example.com","login":"dmoretti","password":"Dm82vQz6p6r"},
+  {"nome":"Sara","cognome":"Marchetti","email":"sara.marchetti@example.com","login":"smarchetti","password":"Sm77p4Rk9z2"},
+  {"nome":"Matteo","cognome":"Romano","email":"matteo.romano@example.com","login":"mromano","password":"Mr28vKq55tL"},
+  {"nome":"Valentina","cognome":"De Luca","email":"valentina.deluca@example.com","login":"vdeluca","password":"Vd66r9Pz3kQ"},
+  {"nome":"Federico","cognome":"Rinaldi","email":"federico.rinaldi@example.com","login":"frinaldi","password":"Fr93vLk2pZ"},
+  {"nome":"Enrico","cognome":"Serra","email":"enrico.serra@example.com","login":"eserra","password":"Es72pLk9vQ"}
+]
