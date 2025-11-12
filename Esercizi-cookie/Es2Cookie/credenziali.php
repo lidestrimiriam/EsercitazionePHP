@@ -5,7 +5,7 @@ $font = $_POST["font"];
 $colore = $_POST["colore"];
 $sfondo = $_POST["sfondo"];
 
-$personalizzazione = "font" "|" "colore" "|" "sfondo"
+$personalizzazione = $font . '|' . $coloreTesto . '|' . $coloreSfondo;
 
 setcookie("nome", $nome, time() + 86400, "/");
 setcookie("cognome", $cognome, time() + 86400, "/");
