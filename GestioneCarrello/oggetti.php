@@ -1,8 +1,8 @@
 <?php
     session_start();
     
-    if(!isset($_SESSION["carello"])){
-        $_SESSION["carello"] = [];
+    if(!isset($_SESSION["carrello"])){
+        $_SESSION["carrello"] = [];
     }
 
     if (isset($_GET['id'])) {
@@ -21,7 +21,7 @@
         $categoria[$oggetto["categoria"]][] = $oggetto;
     }
 
-
+    foreach ($categorie as $nomeCategoria => $oggettiCategoria)
 
 
 ?>

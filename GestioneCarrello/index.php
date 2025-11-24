@@ -13,7 +13,6 @@
     if ($utente["login"] == $login && $utente["password"] == $password) {
      $successo = true;
      $dati = $utente;
-     break;
     }
 
 
