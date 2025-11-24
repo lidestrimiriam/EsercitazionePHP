@@ -1,7 +1,9 @@
   <?php
     session_start();
-    $login = $_POST["login"];
-    $password = $_POST["password"];
+    if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+        $login = $_POST["login"];
+        $password = $_POST["password"];
+    }
     
 
     $utente = json_decode(file_get_contents("utente.json"), true);
