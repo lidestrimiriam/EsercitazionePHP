@@ -18,7 +18,7 @@
 
     $categoria = [];
     foreach ($oggetti as $oggetto) {
-     $categoria[$oggetto["categoria"]][] = $oggetto;
+        $categoria[$oggetto["categoria"]][] = $oggetto;
     }
 
 
