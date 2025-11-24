@@ -16,9 +16,9 @@
     $oggetti = json_decode(file_get_contents('oggetti.json'), true);
 
 
-    $categoria = [];
+    $categorie = [];
     foreach ($oggetti as $oggetto) {
-        $categoria[$oggetto["categoria"]][] = $oggetto;
+        $categorie[$oggetto["categoria"]][] = $oggetto;
     }
 
     foreach ($categorie as $nomeCategoria => $oggettiCategoria)
