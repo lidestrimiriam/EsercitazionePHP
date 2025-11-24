@@ -2,22 +2,23 @@
     session_start();
     $login = $_POST["login"];
     $password = $_POST["password"];
+    
 
-    $utenti = json_decode(file_get_contents('utenti.json'), true);
+    $utente = json_decode(file_get_contents("utente.json"), true);
 
     $successo = false;
     $dati = [];
 
-    foreach ($utenti as $utente) {
-        if ($utente["login"] == $login && $utente["password"] == $password) {
-        $successo = true;
-        $dati = $utente;
-        break;
-        }
+
+    if ($utente["login"] == $login && $utente["password"] == $password) {
+     $successo = true;
+     $dati = $utente;
+     break;
     }
 
+
     if ($successo) {
-        $_SESSION['utente'] = $dati;
+        $_SESSION["utente"] = $dati;
         echo "Login riuscito";
     } else {
         echo "Login fallito";
@@ -39,10 +40,11 @@
     <label for = "login"></label>
     <input type = "text" name = "login" required>
     <br>
-    <label for = "password"></label>
-    <input type = "text" name = "password" required>
+    <label for = "cognome"></label>
+    <input type = "text" name = "cognome" required>
     
-    <button type="submit">Accedi</button>
+    <button type="submit">Registrati</button>
+    <p id = "testo"></p>
 
   
 

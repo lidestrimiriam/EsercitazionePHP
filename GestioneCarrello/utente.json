@@ -1,0 +1,164 @@
+[
+    {
+        "id": 1,
+        "nome": "Mario",
+        "cognome": "Rossi",
+        "login": "mrossi",
+        "password": "pass1"
+    },
+    {
+        "id": 2,
+        "nome": "Luigi",
+        "cognome": "Verdi",
+        "login": "lverdi",
+        "password": "pass2"
+    },
+    {
+        "id": 3,
+        "nome": "Anna",
+        "cognome": "Bianchi",
+        "login": "abianchi",
+        "password": "pass3"
+    },
+    {
+        "id": 4,
+        "nome": "Giulia",
+        "cognome": "Ferrari",
+        "login": "gferrari",
+        "password": "pass4"
+    },
+    {
+        "id": 5,
+        "nome": "Paolo",
+        "cognome": "Neri",
+        "login": "pneri",
+        "password": "pass5"
+    },
+    {
+        "id": 6,
+        "nome": "Carla",
+        "cognome": "Gentile",
+        "login": "cgentile",
+        "password": "pass6"
+    },
+    {
+        "id": 7,
+        "nome": "Simone",
+        "cognome": "Conti",
+        "login": "sconti",
+        "password": "pass7"
+    },
+    {
+        "id": 8,
+        "nome": "Elena",
+        "cognome": "Moretti",
+        "login": "emoretti",
+        "password": "pass8"
+    },
+    {
+        "id": 9,
+        "nome": "Federico",
+        "cognome": "Galli",
+        "login": "fgalli",
+        "password": "pass9"
+    },
+    {
+        "id": 10,
+        "nome": "Sofia",
+        "cognome": "Ricci",
+        "login": "sricci",
+        "password": "pass10"
+    },
+    {
+        "id": 11,
+        "nome": "Davide",
+        "cognome": "Lombardi",
+        "login": "dlombardi",
+        "password": "pass11"
+    },
+    {
+        "id": 12,
+        "nome": "Lara",
+        "cognome": "Testa",
+        "login": "ltesta",
+        "password": "pass12"
+    },
+    {
+        "id": 13,
+        "nome": "Lorenzo",
+        "cognome": "De Luca",
+        "login": "ldeluca",
+        "password": "pass13"
+    },
+    {
+        "id": 14,
+        "nome": "Martina",
+        "cognome": "Riva",
+        "login": "mriva",
+        "password": "pass14"
+    },
+    {
+        "id": 15,
+        "nome": "Giorgio",
+        "cognome": "Fontana",
+        "login": "gfontana",
+        "password": "pass15"
+    },
+    {
+        "id": 16,
+        "nome": "Valentina",
+        "cognome": "Serra",
+        "login": "vserra",
+        "password": "pass16"
+    },
+    {
+        "id": 17,
+        "nome": "Nicola",
+        "cognome": "Martini",
+        "login": "nmartini",
+        "password": "pass17"
+    },
+    {
+        "id": 18,
+        "nome": "Francesca",
+        "cognome": "Villa",
+        "login": "fvilla",
+        "password": "pass18"
+    },
+    {
+        "id": 19,
+        "nome": "Matteo",
+        "cognome": "Sanna",
+        "login": "msanna",
+        "password": "pass19"
+    },
+    {
+        "id": 20,
+        "nome": "Beatrice",
+        "cognome": "Colombo",
+        "login": "bcolombo",
+        "password": "pass20"
+    },
+    {
+        "id": 21,
+        "nome": "Alessia",
+        "cognome": "Romano",
+        "login": "aromano",
+        "password": "pass21"
+    },
+    {
+        "id": 22,
+        "nome": "Miriam",
+        "cognome": "Li Destri",
+        "login": "mlidestri",
+        "password": "pass22"
+    },
+    {
+        "id": 23,
+        "nome": "Diego",
+        "cognome": "Marinsek",
+        "login": "dmarinsek",
+        "password": "pass23"
+    }
+    
+]
