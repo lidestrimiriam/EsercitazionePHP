@@ -1,0 +1,37 @@
+[
+  { "id": 1,  "nome": "Laptop",            "categoria": "Informatica" },
+  { "id": 2,  "nome": "Mouse",             "categoria": "Informatica" },
+  { "id": 3,  "nome": "Tastiera",          "categoria": "Informatica" },
+  { "id": 4,  "nome": "Monitor",           "categoria": "Informatica" },
+  { "id": 5,  "nome": "Hard Disk",         "categoria": "Informatica" },
+
+  { "id": 6,  "nome": "Sedia",             "categoria": "Casa" },
+  { "id": 7,  "nome": "Tavolo",            "categoria": "Casa" },
+  { "id": 8,  "nome": "Lampada",           "categoria": "Casa" },
+  { "id": 9,  "nome": "Armadio",           "categoria": "Casa" },
+  { "id": 10, "nome": "Divano",            "categoria": "Casa" },
+
+  { "id": 11, "nome": "Pallone da calcio", "categoria": "Sport" },
+  { "id": 12, "nome": "Racchetta da tennis", "categoria": "Sport" },
+  { "id": 13, "nome": "Bicicletta",        "categoria": "Sport" },
+  { "id": 14, "nome": "Guantoni da boxe",  "categoria": "Sport" },
+  { "id": 15, "nome": "Manubri",           "categoria": "Sport" },
+
+  { "id": 16, "nome": "Frullatore",        "categoria": "Cucina" },
+  { "id": 17, "nome": "Pentola",           "categoria": "Cucina" },
+  { "id": 18, "nome": "Coltello da chef",  "categoria": "Cucina" },
+  { "id": 19, "nome": "Tostapane",         "categoria": "Cucina" },
+  { "id": 20, "nome": "Bilancia da cucina","categoria": "Cucina" },
+
+  { "id": 21, "nome": "Stampante",         "categoria": "Ufficio" },
+  { "id": 22, "nome": "Cancellino",        "categoria": "Ufficio" },
+  { "id": 23, "nome": "Notebook",          "categoria": "Ufficio" },
+  { "id": 24, "nome": "Penna",             "categoria": "Ufficio" },
+  { "id": 25, "nome": "Post-it",           "categoria": "Ufficio" },
+
+  { "id": 26, "nome": "Televisore",        "categoria": "Elettronica" },
+  { "id": 27, "nome": "Cuffie",            "categoria": "Elettronica" },
+  { "id": 28, "nome": "Speaker Bluetooth", "categoria": "Elettronica" },
+  { "id": 29, "nome": "Smartphone",        "categoria": "Elettronica" },
+  { "id": 30, "nome": "Powerbank",         "categoria": "Elettronica" }
+]
