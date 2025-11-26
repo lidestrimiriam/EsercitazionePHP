@@ -18,12 +18,6 @@
     }
 
 
-    if ($successo) {
-        $_SESSION["utente"] = $dati;
-        echo "Login riuscito";
-    } else {
-        echo "Login fallito";
-    }
 
 
 ?>
@@ -38,15 +32,16 @@
 <body>
     <h2>LOGIN</h2>
 
+    <form action = "oggetti.php" method = "POST">
     <label for = "login"></label>
     <input type = "text" name = "login" required>
     <br>
     <label for = "cognome"></label>
     <input type = "text" name = "cognome" required>
     
-    <button type="submit">Registrati</button>
+    <button type="submit">Accedi</button>
     <p id = "testo"></p>
-
+    </form>
   
 
 </body>
