@@ -1,6 +1,6 @@
   <?php
     session_start();
-    if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+    if ($_SERVER["REQUEST_METHOD"] === "POST"){
         $login = $_POST["login"];
         $password = $_POST["password"];
     }
@@ -17,9 +17,6 @@
      $dati = $utente;
     }
 
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -30,14 +27,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>LOGIN</h2>
+    <h2>LOGIN:</h2>
 
     <form action = "oggetti.php" method = "POST">
-    <label for = "login"></label>
+    <label for = "login">Inserisci username:</label>
     <input type = "text" name = "login" required>
     <br>
-    <label for = "cognome"></label>
-    <input type = "text" name = "cognome" required>
+    <label for = "password">Inserisci password:</label>
+    <input type = "text" name = "password" required>
     
     <button type="submit">Accedi</button>
     <p id = "testo"></p>
