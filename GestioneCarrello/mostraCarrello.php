@@ -6,7 +6,7 @@
 
     if (!isset($_SESSION["carrello"]) || empty($_SESSION["carrello"])) {
         echo "<h2>Il carrello è vuoto</h2>";
-        echo "<a href="prodotti.php">Torna ai prodotti</a>";
+        echo '<a href="oggetti.php">Torna ai prodotti</a>';
         exit;
     }
 ?>
@@ -24,7 +24,7 @@
     <?php 
         foreach ($prodotti as $p) {
             if ($p["id"] == $id) {
-                echo "<p><strong>{$p["nome"]}</strong> ({$p["categoria"]}) — Quantità: $quantita</p>";
+               echo "<p><strong>" . $p["nome"] . "</strong> (" . $p["categoria"] . ") — Quantità: " . $quantita . "</p>";
             }
         }
     ?>
