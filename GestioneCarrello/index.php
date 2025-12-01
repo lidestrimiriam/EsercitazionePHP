@@ -27,7 +27,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>LOGIN:</h2>
+    <h1>LOGIN:</h1>
 
     <form action = "oggetti.php" method = "POST">
     <label for = "login">Inserisci username:</label>
@@ -35,8 +35,8 @@
     <br>
     <label for = "password">Inserisci password:</label>
     <input type = "text" name = "password" required>
-    
-    <button type="submit">Accedi</button>
+    <br>
+    <button type="submit"><h4>Accedi</h4></button>
     <p id = "testo"></p>
     </form>
   

@@ -26,7 +26,7 @@
     <title>prodotti</title>
 </head>
 <body>
-    <h2>PRODOTTI:</h2>
+    <h1>PRODOTTI:</h1>
 
   <?php foreach ($prodotti as $p): ?>
     <div style="margin-bottom: 10px;">

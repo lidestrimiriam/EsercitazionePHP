@@ -31,7 +31,7 @@
     <title>Carrello</title>
 </head>
 <body>
-    <h2>Carrello:</h2>
+    <h1>CARRELLO:</h1>
 
     <form action="mostraCarrello.php" method="POST">
     <?php foreach ($_SESSION["carrello"] as $id => $quantita): ?>
