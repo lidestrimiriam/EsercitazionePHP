@@ -25,7 +25,7 @@ CREATE TABLE Biblioteca.Libro(
 
 INSERT INTO Biblioteca.Libro values 
 (1, 'Cè un Cadavere in Biblioteca', 'Agatha Christie', '9780062573292',1942),
-(2, 'Dieci piccoli indiani', 'Agatha Christie', '9788804738225', 1939),
+(2, 'Amico ritrovato', 'Fred Uhlman', '9788804738225', 1971),
 (3, 'Il pomeriggio della luna', 'Marco Pozza', ' 9788854895867', 2016),
 (4, 'Il caso Agatha Christie', 'Nina de Gramont', '9780451524935', 2022),
 (5, 'Il piccolo principe', 'Antoine de Saint-Exupéry', '9780156013987', 1943);
