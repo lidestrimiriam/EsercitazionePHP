@@ -57,7 +57,7 @@ INSERT INTO Biblioteca.Libro values
 (16, 'Storia d amore antico', 'Umberto Eco', '9788800000001', 1600),
 (17, 'Una storia moderna', 'Paolo Giordano', '9788800000002', 2018),
 (18, 'Amore e destino', 'Isabel Allende', '9788800000003', 1995),
-(19, 'Manuale di storia medievale', 'Alessandro Barbero', '9788800000004', 1700),
+(19, 'L.amica geniale', 'Elena Ferrante', '9781609450786', 2011),
 (20, 'Racconti senza tempo', 'Italo Calvino', 'NULL', 1890);
 
 CREATE TABLE Biblioteca.Prestito(
@@ -93,18 +93,20 @@ INSERT INTO Biblioteca.Prestito values
 (13, 13, 3, '2025-03-22', '2025-04-12'),
 (14, 14, 11, '2024-05-25', NULL),
 (15, 15, 4, '2026-04-18', '2026-05-02'),
-(16, 16, 16, '2024-01-10', '2024-02-10'),
+(16, 16, 20, '2024-01-10', '2024-02-10'),
 (17, 17, 17, '2024-06-15', NULL),
 (18, 19, 18, '2025-03-10', '2025-04-10'),
 (19, 16, 19, '2024-09-01', '2024-09-20'),
 (20, 18, 16, '2026-01-05', NULL);
 
+-- Esercitazione 1
 SELECT * FROM Biblioteca.Utente;
 SELECT * FROM Biblioteca.Libro;
 SELECT * FROM Biblioteca.Utente WHERE eta <= 18;
 SELECT * FROM Biblioteca.Libro WHERE anno_pubblicazione > 2010;
 SELECT nome, cognome, eta FROM Biblioteca.Utente WHERE email LIKE '%@gmail%';
 
+-- Esercitazione 2
 SELECT * FROM Biblioteca.Utente WHERE nome LIKE 'B%';
 SELECT DISTINCT Libro.titolo FROM Biblioteca.Libro JOIN Biblioteca.Prestito ON libro.id = Prestito.id_libro WHERE Prestito.data_prestito LIKE '2026%';
 SELECT * FROM Biblioteca.Libro JOIN Biblioteca.Prestito ON Libro.id = Prestito.id_libro JOIN Biblioteca.Utente ON Prestito.id_utente = Utente.cf WHERE Utente.email = 'nicolo.rossi@gigi.com';
@@ -112,6 +114,7 @@ SELECT titolo, autore FROM Biblioteca.Libro JOIN Biblioteca.Prestito ON Libro.id
 SELECT DISTINCT Libro.titolo, Libro.autore FROM Biblioteca.Libro JOIN Biblioteca.Prestito ON Libro.id = prestito.id_libro JOIN Biblioteca.Utente ON Prestito.id_utente = Utente.cf WHERE Utente.eta BETWEEN 18 AND 24;
 SELECT titolo, autore, Utente.nome, Utente.cognome FROM Biblioteca.Libro JOIN Biblioteca.Prestito ON Libro.id = Prestito.id_libro JOIN Biblioteca.Utente ON Prestito.id_utente = Utente.cf WHERE Prestito.data_prestito LIKE '2020%';
 
+-- Esercitazione 3
 SELECT * FROM Biblioteca.Utente WHERE eta > 25;
 SELECT * FROM Biblioteca.Utente WHERE nome LIKE 'F%';
 SELECT * FROM Biblioteca.Utente WHERE email LIKE '%gmail%';
@@ -131,6 +134,16 @@ SELECT * FROM Biblioteca.Prestito JOIN Biblioteca.Utente ON Prestito.id_utente =
 SELECT * FROM Biblioteca.Libro JOIN Biblioteca.Prestito ON Libro.id = Prestito.id_utente WHERE Libro.titolo LIKE '%storia%';
 SELECT DISTINCT email FROM Biblioteca.Utente JOIN Biblioteca.Prestito ON Utente.cf = Prestito.id_utente;
 SELECT titolo FROM Biblioteca.Libro JOIN Biblioteca.Prestito ON Libro.id = Prestito.id_libro WHERE Libro.anno_pubblicazione BETWEEN 1500 AND 1700;
+
+-- Esercitazione 4
+SELECT * FROM Biblioteca.Utente WHERE eta IN (10, 15, 22, 50);
+SELECT * FROM Biblioteca.Utente JOIN Biblioteca.Prestito ON Utente.cf = Prestito.id_utente JOIN Biblioteca.Libro ON Libro.id = Prestito.id_libro WHERE Libro.autore IN ('Italo Calvino', 'Umberto Eco', 'Elena Ferrante');
+SELECT * FROM Biblioteca.Prestito JOIN Biblioteca.Libro ON Prestito.id_libro = Libro.id WHERE Libro.anno_pubblicazione IN (2020, 2022, 2026);
+SELECT * FROM Biblioteca.Utente JOIN Biblioteca.Prestito ON Prestito.id_utente = Utente.cf JOIN Biblioteca.Libro ON Libro.id = Prestito.id_libro WHERE isbn != 'NULL';
+SELECT * FROM Biblioteca.Prestito WHERE data_restituzione IS NULL;
+SELECT * FROM biblioteca.Prestito WHERE data_restituzione IS NOT NULL;
+SELECT * FROM Biblioteca.Libro WHERE Libro.id NOT IN(SELECT Prestito.id_libro FROM Biblioteca.Prestito);
+
 
 
 DROP DATABASE Biblioteca;
