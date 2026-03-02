@@ -144,7 +144,8 @@ SELECT * FROM Biblioteca.Prestito WHERE data_restituzione IS NULL;
 SELECT * FROM biblioteca.Prestito WHERE data_restituzione IS NOT NULL;
 SELECT * FROM Biblioteca.Libro WHERE Libro.id NOT IN(SELECT Prestito.id_libro FROM Biblioteca.Prestito);
 
-
+-- Esercitazione 5
+SELECT Utente.cf, Utente.nome, COUNT(Prestito.id_prestito) AS numero_prestiti FROM Biblioteca.Utente LEFT JOIN Biblioteca.Prestiti ON Biblioteca.Utente = Prestito.id_utete GROUP BY Utente.cf, Utente.nome;
 
 DROP DATABASE Biblioteca;
 CREATE DATABASE Biblioteca;
