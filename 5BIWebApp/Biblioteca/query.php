@@ -6,21 +6,15 @@
 </head>
 <body>
 
-<form method="get">
-    Nome: <input type="text" name="nome"><br>
-    Cognome: <input type="text" name="cognome"><br>
-    Eta: <input type="number" name="eta"><br>
-    <input type="submit" name="invia" value="Invia dati">
-</form>
 
 <?php
-$conn = mysqli_connect("localhost", "root", "", "Biblioteca");
+$conn = mysqli_connect("localhost","root","","Biblioteca");
 
 if(isset($_GET['eta'])){
     $eta = $_GET['eta'];
 
-    $query = "SELECT nome, cognome, eta FROM Utente WHERE eta = $eta";
-    $result = mysqli_query($conn, $query);
+    $query = "SELECT nome,cognome,eta FROM Utente WHERE eta = $eta";
+    $result = mysqli_query($conn,$query);
 
     if(mysqli_num_rows($result) > 0){
         while($riga = mysqli_fetch_assoc($result)){
@@ -29,7 +23,7 @@ if(isset($_GET['eta'])){
             echo "Eta: ".$riga['eta']."<br><br>";
         }
     } else {
-        echo "Nessun utente trovato per l'età $eta";
+        echo "Nessun utente trovato";
     }
 }
 ?>
