@@ -5,30 +5,32 @@ CREATE TABLE Biblioteca.Utente(
     nome varchar(100) NOT NULL,
     cognome varchar(100) NOT NULL,
     email varchar(100) NOT NULL UNIQUE,
-    eta int CHECK(eta >= 8)
+    eta int CHECK(eta >= 8) NOT NULL,
+    psw varchar(100) NOT NULL
+
 );
 
 INSERT INTO Biblioteca.Utente values 
-(1, 'Miriam', 'Li Destri', 'm.lide@gmail.com',18),
-(2, 'Diego', 'Marinsek', 'd.mari@gmail.com', 18),
-(3, 'Sara', 'Rossi', 's.rossi@gmail.com', 19),
-(4, 'Marco', 'Verdi', 'm.verdi@gmail.com', 35),
-(5, 'Emma', 'Neri', 'e.neri@gmail.com', 28),
-(6, 'Tommaso', 'Rinaldi', 't.rinaldi@gmail.com', 17),
-(7, 'Sofia', 'Caruso', 's.caruso@gmail.com', 16),
-(8, 'Gabriele', 'Leone', 'g.leone@gmail.com', 15),
-(9, 'Alice', 'Martini', 'a.martini@gmail.com', 14),
-(10, 'Riccardo', 'Longo', 'r.longo@gmail.com', 13),
-(11, 'Beatrice', 'Gentile', 'b.gentile@gmail.com', 12),
-(12, 'Edoardo', 'Serra', 'e.serra@gmail.com', 11),
-(13, 'Noemi', 'Villa', 'n.villa@gmail.com', 10),
-(14, 'Samuele', 'Ferraro', 's.ferraro@gmail.com', 9),
-(15, 'Niccolo', 'Rossi', 'nicolo.rossi@gigi.com', 8),
-(16, 'Francesca', 'Galli', 'francesca.galli@gmail.com', 27),
-(17, 'Fabio', 'Morelli', 'fabio.morelli@gmail.com', 32),
-(18, 'Federica', 'Martelli', 'f.martelli@gmail.com', 24),
-(19, 'Luca', 'Galli', 'luca.galli@gmail.com', 29),
-(20, 'Giulia', 'Belli', 'giulia.belli@yahoo.com', 26);
+(1, 'Miriam', 'Li Destri', 'm.lide@gmail.com', 18, 'miriam23'),
+(2, 'Diego', 'Marinsek', 'd.mari@gmail.com', 18, 'diego234'),
+(3, 'Sara', 'Rossi', 's.rossi@gmail.com', 19, 'saraRossi9'),
+(4, 'Marco', 'Verdi', 'm.verdi@gmail.com', 35, 'marcoVerdi1'),
+(5, 'Emma', 'Neri', 'e.neri@gmail.com', 28, 'emmaNeri22'),
+(6, 'Tommaso', 'Rinaldi', 't.rinaldi@gmail.com', 17, 'tommyRina8'),
+(7, 'Sofia', 'Caruso', 's.caruso@gmail.com', 16, 'sofiaCaru9'),
+(8, 'Gabriele', 'Leone', 'g.leone@gmail.com', 15, 'gabriele88'),
+(9, 'Alice', 'Martini', 'a.martini@gmail.com', 14, 'aliceMart1'),
+(10, 'Riccardo', 'Longo', 'r.longo@gmail.com', 13, 'riccardo77'),
+(11, 'Beatrice', 'Gentile', 'b.gentile@gmail.com', 12, 'beaGentile'),
+(12, 'Edoardo', 'Serra', 'e.serra@gmail.com', 11, 'edoSerra11'),
+(13, 'Noemi', 'Villa', 'n.villa@gmail.com', 10, 'noemiVilla'),
+(14, 'Samuele', 'Ferraro', 's.ferraro@gmail.com', 9, 'samFerraro'),
+(15, 'Niccolo', 'Rossi', 'nicolo.rossi@gigi.com', 8, 'niccoloR8'),
+(16, 'Francesca', 'Galli', 'francesca.galli@gmail.com', 27, 'franceGalli'),
+(17, 'Fabio', 'Morelli', 'fabio.morelli@gmail.com', 32, 'fabioMore1'),
+(18, 'Federica', 'Martelli', 'f.martelli@gmail.com', 24, 'fedeMart24'),
+(19, 'Luca', 'Galli', 'luca.galli@gmail.com', 29, 'lucaGalli29'),
+(20, 'Giulia', 'Belli', 'giulia.belli@yahoo.com', 26, 'giuliaBell9');
 
 CREATE TABLE Biblioteca.Libro(
 	id int PRIMARY KEY,
