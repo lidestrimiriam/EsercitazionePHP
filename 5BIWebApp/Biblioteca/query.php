@@ -6,7 +6,11 @@
     <title>ETA PERSONE</title>
 </head>
 <body>
-    
+    nome: <input type = "text" name = "nome">
+    cognome: <input type = "text" name = "cognome">
+        
+    eta: <input type = "number" name = "eta">
+    <input type = "submit" name = "invia" value = "invia dati">
 </body>
 </html>
 
