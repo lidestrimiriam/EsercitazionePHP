@@ -20,9 +20,14 @@ if(isset($_POST['email'] && $_POST['psw'])){
     $email = $_POST['email'];
     $psw= $_POST['psw'];
     
-    $query = "SELECT * FROM Utente WHERE email = '$email' AND '$psw'";
-    $result = mysqli_query($conn,$query);
-}
+    if(strlen($psw) < 8){
+        echo "Password errata";
+    }else{
+        $query = "SELECT * FROM Utente WHERE email = '$email' AND '$psw'";
+        $result = mysqli_query($conn,$query);
+    }
+
+
 
 
 
