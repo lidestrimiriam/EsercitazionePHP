@@ -1,38 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETA PERSONE</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
 <?php
+$conn = mysqli_connect("localhost", "root", "", "Biblioteca");
 
-if(isset($_POST['eta'])){
+if(isset($GET['eta'])){
+    $eta = $_GET['eta'];
+    $query = ("SELECT nome, cognome, eta FROM Utente WHERE eta = $eta");
+    $result = mysqli_query($conn, $query);
 
-    $eta = $_POST['eta'];
-
-
-    $conn = new mysqli("localhost", "root", "", "Biblioteca");
-
-    if ($conn->connect_error) {
-        die("Errore connessione: " . $conn->connect_error);
-    }
-
-    $stmt = $conn->prepare("SELECT * FROM Utente WHERE eta = ?");
-    $stmt->bind_param("i", $eta);
-    $stmt->execute();
-    $risultato = $stmt->get_result();
-
-    echo "<h2>Risultati ricerca</h2>";
-
-    if($risultato->num_rows > 0){
-
-        while($riga = $risultato->fetch_assoc()){
-            echo "CF: " . $riga["cf"] . "<br>";
-            echo "Nome: " . $riga["nome"] . "<br>";
-            echo "Cognome: " . $riga["cognome"] . "<br>";
-            echo "Email: " . $riga["email"] . "<br>";
-            echo "<hr>";
+    if($result -> num_rows > 0){
+        while($riga = $result -> fetch_assoc()){
+            echo "Nome: ".$riga['nome']."<br>";
+            echo "Cognome: ".$riga['cognome']."<br>";
+            echo "Eta: ".$riga['eta']."<br>";
         }
-
-    } else {
-        echo "Nessun utente trovato con questa età.";
+    }else{
+        echo "Nessun utente trovato per l'età $eta";
     }
-
-    $stmt->close();
-    $conn->close();
 }
 ?>
