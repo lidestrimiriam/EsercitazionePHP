@@ -5,9 +5,8 @@ CREATE TABLE Biblioteca.Utente(
     nome varchar(100) NOT NULL,
     cognome varchar(100) NOT NULL,
     email varchar(100) NOT NULL UNIQUE,
-    eta int CHECK(eta >= 8) NOT NULL,
+    eta int CHECK(eta >= 8),
     psw varchar(100) NOT NULL
-
 );
 
 INSERT INTO Biblioteca.Utente values 
@@ -150,7 +149,6 @@ SELECT * FROM Biblioteca.Libro WHERE Libro.id NOT IN(SELECT Prestito.id_libro FR
 SELECT Utente.cf, Utente.nome, Utente.cognome, COUNT(Prestito.id_prestito) AS numero_prestiti FROM Biblioteca.Utente LEFT JOIN Biblioteca.Prestito ON Utente.cf = Prestito.id_utente GROUP BY Utente.cf, Utente.nome, Utente.cognome;
 SELECT Libro.id, Libro.titolo, COUNT(Prestito.id_prestito) AS numero_prestiti FROM Biblioteca.Libro LEFT JOIN Biblioteca.Prestito ON Libro.id = Prestito.id_libro GROUP BY Libro.id, Libro.titolo;
 SELECT AVG(Utente.eta) FROM Biblioteca.Utente;
-SELECT eta, COUNT(*) AS numero_utenti FROM Biblioteca.Utente GROUP BY eta;
 SELECT Libro.id, Libro.autore, COUNT(Prestito.id_prestito) AS numero_prestiti FROM Biblioteca.Libro LEFT JOIN Biblioteca.Prestito ON Libro.id = Prestito.id_libro GROUP BY Libro.id, Libro.autore;
 SELECT MIN(Utente.eta), MAX(Utente.eta), AVG(Utente.eta) FROM Biblioteca.Utente WHERE Utente.cf IN (SELECT DISTINCT Prestito.id_utente FROM Biblioteca.Prestito);
 
