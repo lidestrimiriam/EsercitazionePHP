@@ -6,6 +6,12 @@
 </head>
 <body>
 
+    <form method="GET">
+        Nome: <input type="text" name="nome"><br>
+        Cognome: <input type="text" name="cognome"><br>
+        Eta: <input type="number" name="eta"><br>
+        <input type="submit" value="Invia dati">
+    </form>
 
 <?php
 $conn = mysqli_connect("localhost","root","","Biblioteca");
