@@ -26,14 +26,13 @@ if(isset($_POST['email'] && $_POST['psw'])){
         $query = "SELECT * FROM Utente WHERE email = '$email' AND '$psw'";
         $result = mysqli_query($conn,$query);
     }
+}
 
 
 
 
 
 ?>
-
-
 
 
 
