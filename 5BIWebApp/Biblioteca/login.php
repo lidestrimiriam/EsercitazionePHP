@@ -14,23 +14,25 @@
     </form>
     
 <?php
-$conn = mysqli_connect("localhost","root","","Biblioteca");
+session_start();
 
-if(isset($_POST['email'] && $_POST['psw'])){
-    $email = $_POST['email'];
-    $psw= $_POST['psw'];
-    
-    if(strlen($psw) < 8){
-        echo "Password errata";
-    }else{
-        $query = "SELECT * FROM Utente WHERE email = '$email' AND '$psw'";
-        $result = mysqli_query($conn,$query);
+$conn = mysqli_connect("localhost", "root", " ", "Biblioteca");
+
+if(isset($_POST["email"]) && isset($_POST["psw"])){
+    $email = $_POST["email"];
+    $psw = $_POST["psw"];
+
+    $query = ("SELECT * FROM Utente WHERE email = ? AND psw = ?");
+
+    if($stmt = $conn -> prepare($query)){
+        $stmt -> bind_param("ss", $email, $psw);
+        $stmt -> execute();
+        $result = $stmt -> get_result();
     }
+
+    
+
 }
-
-
-
-
 
 ?>
 
