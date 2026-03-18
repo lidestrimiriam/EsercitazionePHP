@@ -7,16 +7,16 @@
 </head>
 <body>
 
-     <form method="POST">
-        Email: <input type="number" name="email"><br>
-        Password: <input type="number" name="psw"><br>
+     <form action = "login.php" method="POST">
+        Email: <input type="text" name="email"><br>
+        Password: <input type="text" name="psw"><br>
         <input type="submit" value="Invia dati">
     </form>
     
 <?php
 session_start();
 
-$conn = mysqli_connect("localhost", "root", " ", "Biblioteca");
+$conn = mysqli_connect("localhost", "root", "", "Biblioteca");
 
 if(isset($_POST["email"]) && isset($_POST["psw"])){
     $email = $_POST["email"];
