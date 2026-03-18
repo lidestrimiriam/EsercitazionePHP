@@ -22,7 +22,7 @@ if(isset($_POST["email"]) && isset($_POST["psw"])){
     $email = $_POST["email"];
     $psw = $_POST["psw"];
 
-    $query = ("SELECT * FROM Utente WHERE email = ? AND psw = ?");
+    $query = ("SELECT cf FROM Utente WHERE email = ? AND psw = ?");
 
     if($stmt = $conn -> prepare($query)){
         $stmt -> bind_param("ss", $email, $psw);
@@ -30,7 +30,11 @@ if(isset($_POST["email"]) && isset($_POST["psw"])){
         $result = $stmt -> get_result();
     }
 
-    
+    if($result -> num_rows > 0){
+        $riga = $result -> fetch_assoc();
+        $_SESSION["id_utente"] = $riga["cf"];
+        echo "<a href = 'mostra.php'> Vai a Mostra</a>";
+    }
 
 }
 
