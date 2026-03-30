@@ -1,0 +1,32 @@
+30/03/2026
+
+Normalizzazione
+
+Schema fisico soggetto ad anomalie funzionali o duplicazioni di dati
+Anomalie funzionali = instabilità sulla coerenza dei dati
+
+Per ovviare queste anomalie si verifica la FORMA NORMALE(verifiche sul database).
+
+FORMA NORMALE:
+- Prima forma normale: tutte le tabelle devono avere la PK e tutti i campi/attributi devono essere atomici(non scompobibile in più informazioni);
+
+- Seconda forma normale: Dipendenza funzionale, Decomposizione senza perdite;
+
+
+- Terza forma normale:
+
+
+ORDINI
+prodotto --> prezzo
+
+CORSO
+CodCorso --> NomeCorso --> DataEsame
+
+PRESCRIZIONI
+CodMedico --> Specializzazione
+
+FATTURE
+PIVA_Cliente --> Città
+
+VOLI
+CodAereo --> ModelloAereo --> Capienza
