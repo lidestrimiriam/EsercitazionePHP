@@ -15,7 +15,7 @@ FORMA NORMALE:
 
 - Terza forma normale:
 
-
+Esercizi Dipendenza funzionale e Decomposizione senza perdite:
 ORDINI
 prodotto --> prezzo
 
