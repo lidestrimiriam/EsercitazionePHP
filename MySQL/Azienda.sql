@@ -76,7 +76,7 @@ SELECT cognome FROM Azienda.Impiegato WHERE Impiegato.matricola IN(SELECT dirett
 SELECT nome, cognome FROM Azienda.Progetto JOIN Azienda.Impiegato ON Progetto.responsabile = Impiegato.matricola;
 SELECT nome, cognome FROM Azienda.Partecipazione JOIN Azienda.Progetto ON Progetto.sigla = Partecipazione.progetto JOIN Azienda.Impiegato ON Partecipazione.impiegato = Impiegato.matricola WHERE Progetto.bilancio > 100;
 SELECT cognome FROM Azienda.Impiegato JOIN Azienda.Dipartimento ON Impiegato.dipartimento = Dipartimento.codice WHERE stipendio > ALL(SELECT stipendio FROM Azienda.Impiegato WHERE Impiegato.matricola = Dipartimento.direttore);
-
+SELECT cognome FROM Azienda.Impiegato WHERE Impiegato.matricola IN(SELECT direttore FROM Azienda.Dipartimento) OR Impiegato.matricola IN(SELECT responsabile FROM Azienda.Progetto);
 
 
 DROP DATABASE Azienda;
