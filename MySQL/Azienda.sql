@@ -77,6 +77,16 @@ SELECT nome, cognome FROM Azienda.Progetto JOIN Azienda.Impiegato ON Progetto.re
 SELECT nome, cognome FROM Azienda.Partecipazione JOIN Azienda.Progetto ON Progetto.sigla = Partecipazione.progetto JOIN Azienda.Impiegato ON Partecipazione.impiegato = Impiegato.matricola WHERE Progetto.bilancio > 100;
 SELECT cognome FROM Azienda.Impiegato JOIN Azienda.Dipartimento ON Impiegato.dipartimento = Dipartimento.codice WHERE stipendio > ALL(SELECT stipendio FROM Azienda.Impiegato WHERE Impiegato.matricola = Dipartimento.direttore);
 SELECT cognome FROM Azienda.Impiegato WHERE Impiegato.matricola IN(SELECT direttore FROM Azienda.Dipartimento) OR Impiegato.matricola IN(SELECT responsabile FROM Azienda.Progetto);
+SELECT nome FROM Azienda.Dipartimento JOIN Azienda.Impiegato ON Dipartimento.codice = Impiegato.dipartimento WHERE stipendio > 60;
+ /* OPPURE*/
+SELECT nome FROM Azienda.Dipartimento WHERE EXISTS(SELECT * FROM Azienda.Impiegato WHERE Impiegato.dipartimento = Dipartimento.codice AND stipendio > 60);
+SELECT nome FROM Azienda.Dipartimento WHERE Dipartimento.codice NOT IN(SELECT dipartimento FROM Azienda.Impiegato WHERE stipendio < 60);
+SELECT cognome FROM Azienda.Impiegato WHERE stipendio = (SELECT MAX(stipendio) FROM Azienda.Impiegato);
+SELECT matricola, cognome FROM Azienda.Impiegato WHERE matricola NOT IN(SELECT impiegato FROM Azienda.Partecipazione);
+SELECT matricola, cognome FROM Azienda.Impiegato JOIN Azienda.Partecipazione ON Impiegato.matricola = Partecipazione.impiegato GROUP BY matricola, cognome HAVING COUNT(Partecipazione.progetto) > 1;
+SELECT matricola, cognome FROM Azienda.Impiegato WHERE matricola IN(SELECT impiegato FROM Azienda.Partecipazione GROUP BY impiegato HAVING COUNT(Partecipazione.progetto) = 1);
+SELECT dipartimento, AVG(stipendio) AS media FROM Azienda.Impiegato GROUP BY Impiegato.dipartimento ORDER BY media ASC;
+SELECT matricola, cognome FROM Azienda.Impiegato AS impiegato1 WHERE impiegato1.stipendio > (SELECT AVG(impiegato2.stipendio) * 1.10 FROM Azienda.Impiegato AS impiegato2 WHERE impiegato1.dipartimento = impiegato2.dipartimento);
 
 
 DROP DATABASE Azienda;
