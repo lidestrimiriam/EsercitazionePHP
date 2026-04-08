@@ -10,7 +10,7 @@ Per ovviare queste anomalie si verifica la FORMA NORMALE(verifiche sul database)
 FORMA NORMALE:
 - Prima forma normale: tutte le tabelle devono avere la PK e tutti i campi/attributi devono essere atomici(non scompobibile in più informazioni);
 
-- Seconda forma normale: se PK è in forma normale
+- Seconda forma normale: se PK è in forma normale, tutti gli attributi non PK devono dipendere funzionalmente dall'intera PK
 (Dipendenza funzionale, Decomposizione senza perdite);
 
 
